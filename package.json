@@ -7,7 +7,7 @@
   "scripts": {
     "build": "node_modules/.bin/ngc && copyfiles -u 1 ./src/*.scss ./dist",
     "release": "npm run build && npm publish",
-    "test": "cd demo && npm uninstall ionic-audio && cd.. && npm run build && cd demo && npm install ionic-audio && ionic serve"
+    "test": "cd demo && npm uninstall ionic-audio3 && cd.. && npm run build && cd demo && npm install ionic-audio3 && ionic serve"
   },
   "devDependencies": {
     "@angular/common": "5.0.0",
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arielfaur/ionic-audio.git"
+    "url": "git+https://github.com/JohnnyBui/ionic-audio3.git"
   },
   "keywords": [
     "ionic",
