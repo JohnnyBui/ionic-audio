@@ -22,7 +22,7 @@
     "rxjs": "5.5.2",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.18",
-    "typescript" : "2.4.2",
+    "typescript": "2.4.2",
     "copyfiles": "^1.2.0"
   },
   "repository": {

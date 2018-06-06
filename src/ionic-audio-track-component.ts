@@ -52,6 +52,8 @@ export class AudioTrackComponent implements OnChanges, DoCheck {
    * @type {EventEmitter}
    */
   @Output() onFinish = new EventEmitter<ITrackConstraint>();
+  @Output() onPause = new EventEmitter<number>();
+  @Output() onPlay = new EventEmitter<number>();
 
   private _audioTrack: IAudioTrack;
 
@@ -78,6 +80,7 @@ export class AudioTrackComponent implements OnChanges, DoCheck {
   play() {
     if (!this._audioTrack) return;
 
+    this.onPlay.emit(this._audioTrack.id);
     this._audioTrack.play();
     this._audioProvider.current = this._audioTrack.id;
   }
@@ -85,6 +88,7 @@ export class AudioTrackComponent implements OnChanges, DoCheck {
   pause() {
     if (!this._audioTrack) return;
 
+    this.onPause.emit(this._audioTrack.id);
     this._audioTrack.pause();
     this._audioProvider.current = undefined;
   }
@@ -103,7 +107,6 @@ export class AudioTrackComponent implements OnChanges, DoCheck {
     this._audioTrack.seekTo(time);
   }
 
-
   public get id() : number {
     return this._audioTrack ? this._audioTrack.id : -1;
   }
@@ -112,11 +115,9 @@ export class AudioTrackComponent implements OnChanges, DoCheck {
     return this.track ? this.track.art : undefined;
   }
 
-
   public get artist() : string {
     return this.track ? this.track.artist : undefined;
   }
-
 
   public get title() : string {
     return this.track ? this.track.title : undefined;
