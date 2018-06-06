@@ -1,5 +1,5 @@
 {
-  "name": "ionic-audio",
+  "name": "ionic-audio3",
   "version": "3.2.2",
   "description": "An audio player for Ionic 3 and Angular 5",
   "main": "./dist/index.js",
@@ -36,10 +36,7 @@
     "player",
     "typescript"
   ],
-  "author": "Ariel Faur",
+  "author": "Johnny Bui",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/arielfaur/ionic-audio/issues"
-  },
-  "homepage": "https://github.com/arielfaur/ionic-audio#readme"
+  "homepage": "https://github.com/JohnnyBui/ionic-audio3"
 }
